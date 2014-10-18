@@ -1,0 +1,11 @@
+{
+  "name": "generator-reactFlux",
+  "version": "0.1.0",
+  "description": "",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.17.7"
+  }
+}
