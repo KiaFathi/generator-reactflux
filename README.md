@@ -1,38 +1,39 @@
-# generator-reactFlux [![Build Status](https://secure.travis-ci.org/kiafathi/generator-reactflux.png?branch=master)](https://travis-ci.org/kiafathi/generator-reactflux)
+# generator-reactflux
 
-> [Yeoman](http://yeoman.io) generator
+## About
 
+### Flux Architecture
+
+This generator builds out a basic application with the following architecture:
+
+![](https://github.com/facebook/flux/raw/master/docs/img/flux-diagram-white-background.png)
 
 ## Getting Started
 
-### What is Yeoman?
 
-Trick question. It's not a thing. It's this guy:
+### Install Yeoman
 
-![](http://i.imgur.com/JHaAlBJ.png)
-
-Basically, he wears a top hat, lives in your computer, and waits for you to tell him what kind of application you wish to create.
-
-Not every new computer comes with a Yeoman pre-installed. He lives in the [npm](https://npmjs.org) package repository. You only have to ask for him once, then he packs up and moves into your hard drive. *Make sure you clean up, he likes new and shiny things.*
+To install Yeoman:
 
 ```bash
 npm install -g yo
 ```
 
-### Yeoman Generators
 
-Yeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.
+### Install the Generator
 
-To install generator-reactFlux from npm, run:
+To install generator-reactflux from npm, run:
 
 ```bash
 npm install -g generator-reactflux
 ```
 
-Finally, initiate the generator:
+### Generate Your Application
+
+Run Yeoman and select your generator of choice:
 
 ```bash
-yo reactFlux
+yo
 ```
 
 ## License
