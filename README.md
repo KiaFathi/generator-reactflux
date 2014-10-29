@@ -30,11 +30,19 @@ npm install -g generator-reactflux
 
 ### Generate Your Application
 
-Run Yeoman and select your generator of choice:
+Create a new directory for your application:
+```bash
+mkdir "myApp"
+cd "myApp"
+```
+
+Run Yeoman from inside the new directory and select your generator of choice:
 
 ```bash
-yo
+yo reactflux
 ```
+
+Happy Hacking!
 
 ## License
 
