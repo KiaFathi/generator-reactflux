@@ -3,6 +3,7 @@ var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
 var yosay = require('yosay');
+var chalk = require('chalk');
 
 var ReactFluxGenerator = yeoman.generators.Base.extend({
   initializing: function () {
@@ -14,21 +15,30 @@ var ReactFluxGenerator = yeoman.generators.Base.extend({
 
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the perfect reactFlux generator!'
+      'Welcome to the perfect reactflux generator!'
     ));
 
     var prompts = [{
-      type: 'input',
-      name: 'name',
-      message: 'What would you like to name your application?',
-      default: 'reactFlux'
+      type: 'string',
+      name: 'appName',
+      message: 'What would you like to name your application? ',
+      default: 'reactflux'
+    },{
+      type: 'string',
+      name: 'packageName',
+      message: 'Enter a one-word package name (for package.json): ',
+      default: 'package'
+    },{
+      type: 'string',
+      name: 'appDesc',
+      message: 'Describe your application in one sentence: ',
+      default: '...'
     }];
 
     this.prompt(prompts, function (props) {
-      this.name = props.name;
-      this.config.set('name', this.name);
-      console.log(this.config.get('name'));
-
+      this.appName = props.appName;
+      this.packageName = props.packageName;
+      this.appDesc = props.appDesc;
       done();
     }.bind(this));
   },
@@ -45,11 +55,12 @@ var ReactFluxGenerator = yeoman.generators.Base.extend({
     },
 
     projectfiles: function () {
-      this.src.copy('_package.json', 'package.json');
+      this.template('_package.json', 'package.json');
+      this.template('_README.md', 'README.md');
+      this.template('_bower.json', 'bower.json');
       this.src.copy('_gitignore', '.gitignore');
       this.src.copy('editorconfig', '.editorconfig');
       this.src.copy('jshintrc', '.jshintrc');
-      this.src.copy('_README.md', 'README.md');
       this.src.copy('_gulpfile.js', 'gulpfile.js');
       this.src.copy('_index.html', 'index.html');
       this.src.copy('src/_app.jsx', 'src/app.jsx');

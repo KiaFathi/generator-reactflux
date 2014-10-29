@@ -1,11 +1,10 @@
+# <%= appName %> (<%= packageName %>)
+<%= appDesc %>
+
 ## Usage
 
 ### Getting Started:
 
-1. From the root directory, npm install all the necessary packages.
-```bash
-npm install
-```
 1. From the root directory, run gulp.
 ```bash
 gulp

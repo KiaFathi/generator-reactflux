@@ -1,7 +1,7 @@
 {
-  "name": "reactFlux",
+  "name": "<%= packageName %>",
   "version": "0.0.0",
-  "description": "An application using react, flux, gulp, and browserify",
+  "description": "<%= appName %>: <%= appDesc %>",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
